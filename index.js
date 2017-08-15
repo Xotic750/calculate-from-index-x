@@ -22,16 +22,7 @@ var $calcFromIndex = function calcFromIndex(array, fromIndex) {
 
   var length = toLength(object.length);
   var index = toInteger(fromIndex);
-  if (index < length) {
-    if (index < 0) {
-      index = length - Math.abs(index);
-      if (index < 0) {
-        index = 0;
-      }
-    }
-  }
-
-  return index;
+  return index >= 0 ? index : Math.max(0, length + index);
 };
 
 /**
