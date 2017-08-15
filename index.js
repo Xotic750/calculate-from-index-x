@@ -1,6 +1,6 @@
 /**
  * @file Calculates a fromIndex of a given value for an array.
- * @version 1.0.0
+ * @version 1.0.2
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -32,7 +32,7 @@ var $calcFromIndex = function calcFromIndex(array, fromIndex) {
  * @throws {TypeError} If array is null or undefined.
  * @param {number} fromIndex The position in this array at which to begin. A
  *  negative value gives the index of array.length + fromIndex by asc.
- * @return {number} The calculated fromIndex. Default id 0.
+ * @return {number} The calculated fromIndex. Default is 0.
  * @example
  * var calcFromIndex = require('calculate-from-index-x');
  *

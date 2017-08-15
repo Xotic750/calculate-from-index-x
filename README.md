@@ -23,7 +23,7 @@
 ## calculate-from-index-x
 Calculates a fromIndex of a given value for an array.
 
-**Version**: 1.0.0  
+**Version**: 1.0.2  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
@@ -33,7 +33,7 @@ Calculates a fromIndex of a given value for an array.
 This method calculates a fromIndex of a given value for an array.
 
 **Kind**: Exported member  
-**Returns**: <code>number</code> - The calculated fromIndex. Default id 0.  
+**Returns**: <code>number</code> - The calculated fromIndex. Default is 0.  
 **Throws**:
 
 - <code>TypeError</code> If array is null or undefined.
