@@ -1,6 +1,6 @@
 /**
  * @file Calculates a fromIndex of a given value for an array.
- * @version 2.1.0
+ * @version 2.2.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -10,9 +10,13 @@
 'use strict';
 
 var toObject = require('to-object-x');
-var toLength = require('to-length-x');
-var toInteger = require('to-integer-x');
+var toLength = require('to-length-x').toLength2018;
+var toInteger = require('to-integer-x').toInteger2018;
 var isArrayLike = require('is-array-like-x');
+
+var getMax = function _getMax(a, b) {
+  return a >= b ? a : b;
+};
 
 /**
  * This method calculates a fromIndex of a given value for an array.
@@ -36,7 +40,7 @@ module.exports = function calcFromIndex(array, fromIndex) {
     return 0;
   }
 
-  var length = toLength(object.length);
   var index = toInteger(fromIndex);
-  return index >= 0 ? index : Math.max(0, length + index);
+
+  return index >= 0 ? index : getMax(0, toLength(object.length) + index);
 };
