@@ -1,48 +1,29 @@
-let calcFromIndex;
-
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  calcFromIndex = require('../../index.js');
-} else {
-  calcFromIndex = returnExports;
-}
+import calcFromIndex from '../src/calculate-from-index-x';
 
 describe('calcFromIndex', function() {
   it('is a function', function() {
+    expect.assertions(1);
     expect(typeof calcFromIndex).toBe('function');
   });
 
   it('should throw when target not undefined', function() {
+    expect.assertions(3);
     expect(function() {
       calcFromIndex();
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
+      /* eslint-disable-next-line no-void */
       calcFromIndex(void 0);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       calcFromIndex(null);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
   });
 
   it('should return the correct values for array-like objects', function() {
+    expect.assertions(1);
     const subjects = [
       'abc',
       [1, 2, 3],
@@ -54,6 +35,7 @@ describe('calcFromIndex', function() {
       },
     ];
 
+    /* eslint-disable-next-line no-void */
     const values = [-Infinity, -1, 0, 1, Infinity, NaN, void 0, null, '', '10', false, true];
 
     const exs = [0, 2, 0, 1, Infinity, 0, 0, 0, 0, 10, 0, 1];
@@ -72,6 +54,7 @@ describe('calcFromIndex', function() {
   });
 
   it('should return the correct values non array-like objects', function() {
+    expect.assertions(1);
     const subjects = [
       1,
       true,
@@ -82,6 +65,7 @@ describe('calcFromIndex', function() {
       new Date(),
     ];
 
+    /* eslint-disable-next-line no-void */
     const values = [-Infinity, -1, 0, 1, Infinity, NaN, void 0, null, '', '10', false, true];
 
     const expected = subjects.map(function() {

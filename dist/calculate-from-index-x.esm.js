@@ -3,10 +3,9 @@ import toLength from 'to-length-x';
 import toInteger from 'to-integer-x';
 import isArrayLike from 'is-array-like-x';
 
-const getMax = function getMax(a, b) {
+var getMax = function getMax(a, b) {
   return a >= b ? a : b;
 };
-
 /**
  * This method calculates a fromIndex of a given value for an array.
  *
@@ -16,14 +15,17 @@ const getMax = function getMax(a, b) {
  *  negative value gives the index of array.length + fromIndex by asc.
  * @returns {number} The calculated fromIndex. Default is 0.
  */
+
+
 export default function calcFromIndex(array, fromIndex) {
-  const object = toObject(array);
+  var object = toObject(array);
 
   if (isArrayLike(object) === false) {
     return 0;
   }
 
-  const index = toInteger(fromIndex);
-
+  var index = toInteger(fromIndex);
   return index >= 0 ? index : getMax(0, toLength(object.length) + index);
 }
+
+//# sourceMappingURL=calculate-from-index-x.esm.js.map
