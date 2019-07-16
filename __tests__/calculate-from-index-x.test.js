@@ -13,7 +13,6 @@ describe('calcFromIndex', function() {
     }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
-      /* eslint-disable-next-line no-void */
       calcFromIndex(void 0);
     }).toThrowErrorMatchingSnapshot();
 
@@ -35,7 +34,6 @@ describe('calcFromIndex', function() {
       },
     ];
 
-    /* eslint-disable-next-line no-void */
     const values = [-Infinity, -1, 0, 1, Infinity, NaN, void 0, null, '', '10', false, true];
 
     const exs = [0, 2, 0, 1, Infinity, 0, 0, 0, 0, 10, 0, 1];
@@ -65,7 +63,6 @@ describe('calcFromIndex', function() {
       new Date(),
     ];
 
-    /* eslint-disable-next-line no-void */
     const values = [-Infinity, -1, 0, 1, Infinity, NaN, void 0, null, '', '10', false, true];
 
     const expected = subjects.map(function() {
