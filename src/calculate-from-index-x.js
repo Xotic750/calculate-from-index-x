@@ -16,7 +16,7 @@ const getMax = function getMax(a, b) {
  *  negative value gives the index of array.length + fromIndex by asc.
  * @returns {number} The calculated fromIndex. Default is 0.
  */
-export default function calcFromIndex(array, fromIndex) {
+const calcFromIndex = function calcFromIndex(array, fromIndex) {
   const object = toObject(array);
 
   if (isArrayLike(object) === false) {
@@ -26,4 +26,6 @@ export default function calcFromIndex(array, fromIndex) {
   const index = toInteger(fromIndex);
 
   return index >= 0 ? index : getMax(0, toLength(object.length) + index);
-}
+};
+
+export default calcFromIndex;

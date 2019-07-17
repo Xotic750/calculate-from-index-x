@@ -17,7 +17,7 @@ var getMax = function getMax(a, b) {
  */
 
 
-export default function calcFromIndex(array, fromIndex) {
+var calcFromIndex = function calcFromIndex(array, fromIndex) {
   var object = toObject(array);
 
   if (isArrayLike(object) === false) {
@@ -26,6 +26,8 @@ export default function calcFromIndex(array, fromIndex) {
 
   var index = toInteger(fromIndex);
   return index >= 0 ? index : getMax(0, toLength(object.length) + index);
-}
+};
+
+export default calcFromIndex;
 
 //# sourceMappingURL=calculate-from-index-x.esm.js.map
