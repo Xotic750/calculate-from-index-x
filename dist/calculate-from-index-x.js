@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-24T16:49:26.455Z",
+  "date": "2019-07-25T22:26:30.968Z",
   "describe": "",
   "description": "Calculates a fromIndex of a given value for an array.",
   "file": "calculate-from-index-x.js",
   "hash": "1000ac1236293265e2d6",
   "license": "MIT",
-  "version": "3.0.13"
+  "version": "3.0.14"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
