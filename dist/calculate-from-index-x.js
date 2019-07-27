@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-27T08:56:04.473Z",
+  "date": "2019-07-27T14:48:06.535Z",
   "describe": "",
   "description": "Calculates a fromIndex of a given value for an array.",
   "file": "calculate-from-index-x.js",
-  "hash": "1000ac1236293265e2d6",
+  "hash": "a66cb5808177eb6e6e12",
   "license": "MIT",
-  "version": "3.0.16"
+  "version": "3.0.17"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -1272,8 +1272,6 @@ var binaryRadix = 2;
 var octalRadix = 8;
 var testCharsCount = 2;
 var to_number_x_esm_ERROR_MESSAGE = 'Cannot convert a Symbol value to a number';
-/** @type {NumberConstructor} */
-
 var to_number_x_esm_castNumber = testCharsCount.constructor;
 var pStrSlice = to_number_x_esm_ERROR_MESSAGE.slice;
 var binaryRegex = /^0b[01]+$/i;
